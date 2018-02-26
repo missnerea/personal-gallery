@@ -7,7 +7,17 @@
         {% else %}
         <title>Lifestyle Gallery</title>
         {% endif %}
+        <!-- Bootstrap/Css-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> {% block styles %}
+        <link rel="stylesheet" href="{% static 'index/main.css' %}"> {% endblock %}
+        <!-- Google fonts-->
+        <link href='https://fonts.googleapis.com/css?family=Emilys Candy' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Farsan' rel='stylesheet'>
     </head>
+    <body>
+        {% block styles %}
+        {% endblock %}
 
+    </body>
 
 </html>
