@@ -27,7 +27,11 @@
       
 
     <body>
-     {% block content %}
+            {% include 'navbar.html' %} {% block content %} {% endblock %}
+
+        </body>
+
+     <!-- {% block content %}
      <div class="hero-image">
       </div> 
       {% endblock %}
@@ -56,6 +60,6 @@
 /* Place text in the middle of the image */
     
     
-    </style>
+    </style>-->
 
 </html>
