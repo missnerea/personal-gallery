@@ -15,6 +15,7 @@ class Image(models.Model):
     details=models.TextField(max_length=60, blank=60)
     pub_date = models.DateTimeField(auto_now_add=True)
     category = models.ManyToManyField(Category, blank=True)
+    location=models.ForeignKey(Location)
 
     def __str__(self):
         return self.image
