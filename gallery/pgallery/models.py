@@ -19,3 +19,10 @@ class Image(models.Model):
     def __str__(self):
         return self.image
 
+class Location(models.Model):
+    location=model.CharField(max_length=60)
+
+    def __str__(self):
+        return self.location 
+
+
