@@ -8,6 +8,12 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+class Location(models.Model):
+    location=models.CharField(max_length=60)
+
+    def __str__(self):
+        return self.location 
+
 class Image(models.Model):
     image=models.ImageField(upload_to='gallery/', blank=True)
     image_link=models.TextField(blank=True)
@@ -20,10 +26,6 @@ class Image(models.Model):
     def __str__(self):
         return self.image
 
-class Location(models.Model):
-    location=models.CharField(max_length=60)
 
-    def __str__(self):
-        return self.location 
 
 
