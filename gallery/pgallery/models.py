@@ -34,9 +34,9 @@ class Image(models.Model):
     category = models.ManyToManyField(Category, blank=True)
     location=models.ForeignKey(Location, blank=True, null=True)
 
-    def __str__(self):
-        return self.image
+    def save_image(self):
+        self.save()
 
-
+    
 
 
