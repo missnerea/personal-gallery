@@ -9,6 +9,15 @@ def index (request):
 
      return render(request,'index.html',{"pgallery":pgallery})
 
+def image(request, image_id):
+      try:
+            image = Image.objects.get(id = image_id)
+      except Gallery.DoesNotExist:
+            raise Http404()
+
+      return render(request,"image.html", {"image":image})
+
+
 
 def search_results(request):
     if 'category' in request.GET and request.GET["category"]:
@@ -21,3 +30,4 @@ def search_results(request):
     else:
         message = "You haven't searched for any term"
         return render(request, 'search.html',{"message":message}) 
+
